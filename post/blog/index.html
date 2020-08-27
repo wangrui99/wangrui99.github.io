@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="My New Hugo Site">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://wangrui99.github.io/">
+    <meta property="twitter:image" content="https://wangrui99.github.io/" />
+    
+
+    
+    <meta name="title" content="Blog" />
+    <meta property="og:title" content="Blog" />
+    <meta property="twitter:title" content="Blog" />
+    
+
+    
+    <meta name="description" content="">
+    <meta property="og:description" content="" />
+    <meta property="twitter:description" content="" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Blog-</title>
+
+    <link rel="canonical" href="/post/blog/">
+
+    <link rel="stylesheet" href="/css/iDisqus.min.css"/>
+	
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+    
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    
+    
+    <script src="/js/bootstrap.min.js"></script>
+    
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">My New Hugo Site</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                    
+                    
+		    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1>Blog</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                                My New Hugo Site
+                         
+                        on 
+                        Thursday, August 27, 2020
+                        
+                        
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                <header>
+                    <h2>TOC</h2>
+                </header>
+                <nav id="TableOfContents">
+  <ul>
+    <li><a href="#31-项目级别">3.1. 项目级别</a></li>
+    <li><a href="#32-系统用户级别设置">3.2. 系统用户级别设置</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#41-git-status">4.1. git status</a></li>
+    <li><a href="#42-git-add">4.2. git add</a></li>
+    <li><a href="#43-git-rm---cached">4.3. git rm &ndash;cached</a></li>
+    <li><a href="#44-git-commit">4.4. git commit</a></li>
+    <li><a href="#45-git-commit--m">4.5. git commit -m</a></li>
+    <li><a href="#46-总结">4.6. 总结</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#51-git-log">5.1. git log</a></li>
+    <li><a href="#52-git-reflog">5.2. git reflog</a></li>
+    <li><a href="#53-git-reset---hard">5.3. git reset &ndash;hard</a>
+      <ul>
+        <li><a href="#531-基于索引值回退">5.3.1. 基于索引值回退</a></li>
+        <li><a href="#532-使用符号使用符号回退">5.3.2. 使用^符号，使用~符号回退</a></li>
+        <li><a href="#533-总结">5.3.3. 总结</a></li>
+      </ul>
+    </li>
+    <li><a href="#54-git-reset---soft-mixedhard">5.4. git reset &ndash;soft /mixed/hard</a>
+      <ul>
+        <li><a href="#541-命令对比">5.4.1. 命令对比</a></li>
+        <li><a href="#542-git---soft">5.4.2. git &ndash;soft</a></li>
+        <li><a href="#543-git---mixed">5.4.3. git &ndash;mixed</a></li>
+        <li><a href="#544-恢复最后提交的版本">5.4.4. 恢复最后提交的版本</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#61-永久删除找回通过回退版本的方式">6.1. 永久删除找回，通过回退版本的方式</a>
+      <ul>
+        <li><a href="#611-创建并提交">6.1.1. 创建并提交</a></li>
+        <li><a href="#612-删除查看文件已不再">6.1.2. 删除，查看文件已不再</a></li>
+        <li><a href="#613-提交删除记录">6.1.3. 提交删除记录</a></li>
+        <li><a href="#614-回退找回">6.1.4. 回退找回</a></li>
+      </ul>
+    </li>
+    <li><a href="#62-总结">6.2. 总结</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#71-暂存区文件比较">7.1. 暂存区文件比较</a></li>
+    <li><a href="#72-本地库历史版本比较">7.2. 本地库历史版本比较</a></li>
+    <li><a href="#73-总结">7.3. 总结</a></li>
+  </ul>
+</nav>
+                
+                <h1 id="1-git用来维护本地库">1. git用来维护本地库</h1>
+<p>![](_v_images/20200406143626884_5555.png =677x)</p>
+<h1 id="2-初始化">2. 初始化</h1>
+<pre><code>    mkdir file
+    cd file
+    git init
+    ls -la 查看初始化的目录 .git
+    ll .git
+</code></pre>
+<h1 id="3-设置签名">3. 设置签名</h1>
+<pre><code>用户名：tom
+email：wr@qq.com
+作用：区分不同开发人员
+</code></pre>
+<h2 id="31-项目级别">3.1. 项目级别</h2>
+<pre><code>        项目级别/仓库级别：仅在当前本地库范围内有效
+        git config user.name tom_pro
+        git config user.email goodMorning_pro@atguigu.com
+        信息保存位置：./.git/config 文件
+</code></pre>
+<p>![](_v_images/20200406145130351_6376.png =677x)
+![](_v_images/20200406144637239_12232.png =677x)</p>
+<h2 id="32-系统用户级别设置">3.2. 系统用户级别设置</h2>
+<p>![](_v_images/20200406144806662_31095.png =677x)
+![](_v_images/20200406144901544_25127.png =677x)
+![](_v_images/20200406145057591_22861.png =677x)
+若没有签名则会出错，见 4.4 git commit</p>
+<h1 id="4-基本操作">4. 基本操作</h1>
+<p>
+  <img src="_v_images/20200406151459486_26111.png" alt="">
+
+</p>
+<h2 id="41-git-status">4.1. git status</h2>
+<p>![](_v_images/20200406150751911_226.png =677x)</p>
+<h2 id="42-git-add">4.2. git add</h2>
+<p>![](_v_images/20200406151006119_21191.png =677x)</p>
+<h2 id="43-git-rm---cached">4.3. git rm &ndash;cached</h2>
+<pre><code>只是从暂存区删除，文件并没有删
+</code></pre>
+<p>![](_v_images/20200406151352058_1295.png =677x)</p>
+<h2 id="44-git-commit">4.4. git commit</h2>
+<pre><code>没有设置签名则会出错
+</code></pre>
+<p>![](_v_images/20200406153842789_19657.png =677x)</p>
+<pre><code> 加入签名后提交
+ git config user.name wangrui
+ git config user.email wangrui@qq.com
+ 可见如下信息
+</code></pre>
+<p>![](_v_images/20200406154835993_7176.png =677x)
+![](_v_images/20200406162512427_23482.png =677x)</p>
+<h2 id="45-git-commit--m">4.5. git commit -m</h2>
+<p>更改文件，查看状态
+![](_v_images/20200406162003394_17203.png =677x)
+上图的git commit -a 相当于直接提交到本地库，之后说明
+![](_v_images/20200406162349645_18184.png =677x)</p>
+<h2 id="46-总结">4.6. 总结</h2>
+<pre><code>    状态查看 
+    git status 查看工作区、暂存区状态
+    添加 
+    git add [filename] 将工作区的“新建/修改”添加到暂存区
+    提交 
+    git commit -m&quot;commit message&quot; [filename]  将暂存区的内容提交到本地库
+</code></pre>
+<p>
+  <img src="_v_images/20200406163047411_22660.png" alt="">
+
+</p>
+<h1 id="5-版本穿梭">5. 版本穿梭</h1>
+<h2 id="51-git-log">5.1. git log</h2>
+<p>![](_v_images/20200406164828335_7992.png =677x)
+多屏显示控制方式： 空格向下翻页 ，b 向上翻页 ，q 退出</p>
+<h2 id="52-git-reflog">5.2. git reflog</h2>
+<p>![](_v_images/20200406165221312_2777.png =677x)
+git log &ndash;oneline 只显示历史版本，而reflog可以显示所有版本
+HEAD@{移动到当前版本需要多少步}</p>
+<h2 id="53-git-reset---hard">5.3. git reset &ndash;hard</h2>
+<h3 id="531-基于索引值回退">5.3.1. 基于索引值回退</h3>
+<p>![](_v_images/20200406170406940_25581.png =677x)</p>
+<h3 id="532-使用符号使用符号回退">5.3.2. 使用^符号，使用~符号回退</h3>
+<p>![](_v_images/20200406171757792_13110.png =677x)</p>
+<h3 id="533-总结">5.3.3. 总结</h3>
+<p>
+  <img src="_v_images/20200406172110925_27259.png" alt="">
+
+</p>
+<h2 id="54-git-reset---soft-mixedhard">5.4. git reset &ndash;soft /mixed/hard</h2>
+<h3 id="541-命令对比">5.4.1. 命令对比</h3>
+<p>
+  <img src="_v_images/20200406173443162_30525.png" alt="">
+
+</p>
+<h3 id="542-git---soft">5.4.2. git &ndash;soft</h3>
+<p>可见暂存区变绿
+![](_v_images/20200406173532549_4981.png =677x)</p>
+<h3 id="543-git---mixed">5.4.3. git &ndash;mixed</h3>
+<p>发现暂存区变红
+![](_v_images/20200406173822628_10436.png =677x)</p>
+<h3 id="544-恢复最后提交的版本">5.4.4. 恢复最后提交的版本</h3>
+<p>![](_v_images/20200406174148523_22176.png =677x)</p>
+<h1 id="6-文件找回">6. 文件找回</h1>
+<h2 id="61-永久删除找回通过回退版本的方式">6.1. 永久删除找回，通过回退版本的方式</h2>
+<h3 id="611-创建并提交">6.1.1. 创建并提交</h3>
+<p>![](_v_images/20200406175151979_16542.png =677x)</p>
+<h3 id="612-删除查看文件已不再">6.1.2. 删除，查看文件已不再</h3>
+<p>![](_v_images/20200406175318854_12580.png =677x)</p>
+<h3 id="613-提交删除记录">6.1.3. 提交删除记录</h3>
+<p>![](_v_images/20200406175513298_30855.png =677x)</p>
+<h3 id="614-回退找回">6.1.4. 回退找回</h3>
+<p>![](_v_images/20200406175609807_10799.png =677x)</p>
+<h2 id="62-总结">6.2. 总结</h2>
+<p>
+  <img src="_v_images/20200406180409625_17842.png" alt="">
+
+</p>
+<h1 id="7-文件比较">7. 文件比较</h1>
+<h2 id="71-暂存区文件比较">7.1. 暂存区文件比较</h2>
+<p>![](_v_images/20200406190715793_18916.png =677x)</p>
+<h2 id="72-本地库历史版本比较">7.2. 本地库历史版本比较</h2>
+<p>![](_v_images/20200406190843176_16524.png =677x)</p>
+<h2 id="73-总结">7.3. 总结</h2>
+<p>
+  <img src="_v_images/20200406191057020_31882.png" alt="">
+
+</p>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
+                    
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; My New Hugo Site 2020
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+</body>
+</html>
